@@ -20,7 +20,7 @@ class App extends React.Component {
   }
 
   render() {
-    return <Calendar.Week date={this.state.date} />;
+    return <Calendar date={this.state.date} onDateChange={() => true} />;
   }
 }
 

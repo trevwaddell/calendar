@@ -2,10 +2,11 @@ import React, { Fragment } from "react";
 import { WEEKDAYS, MONTHS } from "./constants";
 import { ArrowLeft, ArrowRight } from "./icons";
 
-const Arrow = ({ symbol, handleClick }) => (
+const Arrow = ({ symbol, handleClick, className }) => (
   <div
     onClick={handleClick}
     style={{ display: "flex", flexGrow: 1, justifyContent: "center" }}
+    className={className}
   >
     <span
       style={{
@@ -30,7 +31,11 @@ export default ({ month, year, handleMonthChange }) => (
         marginTop: 5
       }}
     >
-      <Arrow handleClick={() => handleMonthChange(-1)} symbol={<ArrowLeft />} />
+      <Arrow
+        className="backArr"
+        handleClick={() => handleMonthChange(-1)}
+        symbol={<ArrowLeft />}
+      />
       <div
         style={{
           display: "flex",
@@ -38,13 +43,20 @@ export default ({ month, year, handleMonthChange }) => (
           justifyContent: "center"
         }}
       >
-        <span style={{ fontWeight: "bold", fontSize: 20 }}>
+        <span
+          className="monthName"
+          style={{ fontWeight: "bold", fontSize: 20 }}
+        >
           {MONTHS[month]}
         </span>
         <span>&nbsp;</span>
         <span style={{ fontSize: 20 }}>{year}</span>
       </div>
-      <Arrow handleClick={() => handleMonthChange(1)} symbol={<ArrowRight />} />
+      <Arrow
+        className="forwardArr"
+        handleClick={() => handleMonthChange(1)}
+        symbol={<ArrowRight />}
+      />
     </div>
     <div
       style={{

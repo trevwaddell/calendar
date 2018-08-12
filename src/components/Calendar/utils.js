@@ -24,11 +24,12 @@ function addDays(date, days) {
   return result;
 }
 
-function minusDays(date, days) {
-  const result = new Date(date);
-  result.setDate(result.getDate() - days);
-  return result;
-}
+// Not using
+// function minusDays(date, days) {
+//   const result = new Date(date);
+//   result.setDate(result.getDate() - days);
+//   return result;
+// }
 
 export const addMonths = (date, months) => {
   const result = new Date(date);
