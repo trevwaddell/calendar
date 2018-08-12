@@ -1,0 +1,32 @@
+.day {
+  width: calc(100% / 7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  height: 45px;
+}
+
+.day .container {
+  width: 33px;
+  height: 33px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  /* transition: 0.3s; */
+}
+
+.day .container:hover {
+  background: lightgray;
+  cursor: pointer;
+}
+
+.day .container.today {
+  border: 1px solid rgb(249, 99, 2);
+}
+
+.day .container.selected {
+  background: rgb(249, 99, 2);
+  color: #fff;
+}
