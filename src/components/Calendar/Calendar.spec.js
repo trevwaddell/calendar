@@ -3,7 +3,7 @@ import { mount } from "enzyme";
 
 import Calendar from "./index.js";
 
-it("should increment month by 1", () => {
+it("should increment/decrement month by 1", () => {
   const wrapper = mount(
     <Calendar date={new Date(2018, 7, 12)} onDateChange={jest.fn()} />
   );

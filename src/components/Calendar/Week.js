@@ -4,7 +4,7 @@ import Day from "./Day";
 import { WEEKDAYS } from "./constants";
 import { getCalendarWeekDays } from "./utils";
 
-export default ({ date }) => (
+export default ({ date, onDateChange }) => (
   <Fragment>
     <div style={{ display: "flex" }}>
       {WEEKDAYS.map(day => (
@@ -32,7 +32,7 @@ export default ({ date }) => (
     </div>
     <div style={{ display: "flex" }}>
       {getCalendarWeekDays(date).map(day => (
-        <Day key={day} day={day} handleDateChange={() => console.log(day)} />
+        <Day key={day} day={day} handleDateChange={onDateChange} />
       ))}
     </div>
   </Fragment>
